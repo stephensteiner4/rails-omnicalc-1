@@ -1,7 +1,7 @@
 
 class SquidController < ApplicationController
   def freeze
-    
+    render({:template=>"page_templates/square_home"})
   end
 
 
@@ -14,6 +14,6 @@ class SquidController < ApplicationController
   
     @results = {"Number"=>@number, "Square"=>@sq_number}
   
-    render({:template => "square_action"})
+    render({:template => "page_templates/results"})
   end
 end

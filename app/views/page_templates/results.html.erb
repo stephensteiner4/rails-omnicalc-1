@@ -1,0 +1,13 @@
+<h1><%=@page%> Results</h1>
+
+<p>
+<% @results.keys.each do |key| %>
+  <%=key%><br><span style="margin-left: 40px"><%=@results.fetch(key)%></div><br>
+<% end %>
+</p>
+
+<% if @page != "Random" %>
+  <p><a href="/<%=@page.downcase.gsub(" ", "_")%>/new">Calculate another <%=@page.downcase%></a>
+<% else %>
+  <p><a href="/<%=@page.downcase.gsub(" ", "_")%>/new">Pick another random number</a>
+<% end %>
